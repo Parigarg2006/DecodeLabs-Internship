@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechPulse — Curated technology news, insights, and tutorials for developers and digital creators." />
+  <title>TechPulse | Developer News & Insights</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#main" class="site-header__logo" aria-label="TechPulse Home">
+        <span class="logo__mark" aria-hidden="true">⬡</span>
+        <span class="logo__name">TechPulse</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="#hero">Home</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#featured">Articles</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#topics">Topics</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#newsletter">Newsletter</a></li>
+        </ul>
+      </nav>
+      <a href="#newsletter" class="btn btn--primary site-header__cta">Subscribe Free</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Batch 2026 · DecodeLabs Edition</p>
+          <h1 class="hero__heading" id="hero-heading">
+            Stay Sharp.<br />
+            <span class="hero__heading--accent">Build Faster.</span>
+          </h1>
+          <p class="hero__subtext">
+            TechPulse delivers the week's most important developer news, engineering deep-dives,
+            and frontend fundamentals — curated for builders who ship.
+          </p>
+          <div class="hero__actions">
+            <a href="#featured" class="btn btn--primary">Read Latest</a>
+            <a href="#topics" class="btn btn--ghost">Browse Topics</a>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__code-card">
+            <div class="code-card__bar">
+              <span class="code-card__dot code-card__dot--red"></span>
+              <span class="code-card__dot code-card__dot--yellow"></span>
+              <span class="code-card__dot code-card__dot--green"></span>
+              <span class="code-card__filename">index.html</span>
+            </div>
+            <pre class="code-card__body"><code><span class="c-tag">&lt;header&gt;</span>
+  <span class="c-tag">&lt;nav</span> <span class="c-attr">aria-label</span>=<span class="c-str">"main"</span><span class="c-tag">&gt;</span>
+    <span class="c-comment">&lt;!-- semantic nav --&gt;</span>
+  <span class="c-tag">&lt;/nav&gt;</span>
+<span class="c-tag">&lt;/header&gt;</span>
+<span class="c-tag">&lt;main&gt;</span>
+  <span class="c-tag">&lt;article&gt;</span>
+    <span class="c-tag">&lt;h1&gt;</span><span class="c-text">One per page.</span><span class="c-tag">&lt;/h1&gt;</span>
+  <span class="c-tag">&lt;/article&gt;</span>
+<span class="c-tag">&lt;/main&gt;</span>
+<span class="c-tag">&lt;footer&gt;</span><span class="c-tag">&lt;/footer&gt;</span></code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="hero__stats" aria-label="Publication statistics">
+          <div class="stat">
+            <span class="stat__number">12K+</span>
+            <span class="stat__label">Developers</span>
+          </div>
+          <div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat__number">3×</span>
+            <span class="stat__label">Weekly Issues</span>
+          </div>
+          <div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat__number">100%</span>
+            <span class="stat__label">Free to Read</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured" id="featured" aria-labelledby="featured-heading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__eyebrow">Latest</p>
+          <h2 class="section-header__heading" id="featured-heading">Featured Articles</h2>
+          <p class="section-header__sub">Hand-picked reads for this week's frontend developers.</p>
+        </header>
+
+        <div class="article-grid">
+
+          <article class="article-card article-card--lead" aria-labelledby="art-1-title">
+            <div class="article-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop&auto=format"
+                alt="Lines of code on a dark terminal screen showing CSS grid layout properties"
+                width="800"
+                height="500"
+                loading="eager"
+                class="article-card__image"
+              />
+              <span class="article-card__tag">CSS</span>
+            </div>
+            <div class="article-card__body">
+              <p class="article-card__meta"><time datetime="2026-06-20">June 20, 2026</time> · 8 min read</p>
+              <h3 class="article-card__title" id="art-1-title">
+                CSS Grid vs Flexbox: Choosing the Right Layout System Every Time
+              </h3>
+              <p class="article-card__excerpt">
+                Grid owns the macro — page columns and rows. Flexbox owns the micro —
+                aligning items inside a component. Master both and you'll never fight your layout again.
+              </p>
+              <a href="#featured" class="article-card__link" aria-label="Read CSS Grid vs Flexbox article">Read Article →</a>
+            </div>
+          </article>
+
+          <article class="article-card" aria-labelledby="art-2-title">
+            <div class="article-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=600&h=380&fit=crop&auto=format"
+                alt="Developer laptop showing HTML semantic structure diagram in a code editor"
+                width="600"
+                height="380"
+                loading="lazy"
+                class="article-card__image"
+              />
+              <span class="article-card__tag" style="">HTML</span>
+            </div>
+            <div class="article-card__body">
+              <p class="article-card__meta"><time datetime="2026-06-18">June 18, 2026</time> · 5 min read</p>
+              <h3 class="article-card__title" id="art-2-title">
+                Semantic HTML Is Not Optional — It's Your Foundation
+              </h3>
+              <p class="article-card__excerpt">
+                Div soup is tech debt from day one. Use &lt;header&gt;, &lt;main&gt;, &lt;article&gt;
+                and let the browser and screen readers understand your page.
+              </p>
+              <a href="#featured" class="article-card__link" aria-label="Read Semantic HTML article">Read Article →</a>
+            </div>
+          </article>
+
+          <article class="article-card" aria-labelledby="art-3-title">
+            <div class="article-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=600&h=380&fit=crop&auto=format"
+                alt="Accessibility audit report on a monitor with colourful charts showing contrast ratios"
+                width="600"
+                height="380"
+                loading="lazy"
+                class="article-card__image"
+              />
+              <span class="article-card__tag article-card__tag--a11y">A11Y</span>
+            </div>
+            <div class="article-card__body">
+              <p class="article-card__meta"><time datetime="2026-06-16">June 16, 2026</time> · 6 min read</p>
+              <h3 class="article-card__title" id="art-3-title">
+                Accessibility in 2026: What Every Frontend Dev Must Know
+              </h3>
+              <p class="article-card__excerpt">
+                Contrast ratio above 4.5:1, alt text on every meaningful image,
+                keyboard-navigable focus — these aren't nice-to-haves, they're professional standards.
+              </p>
+              <a href="#featured" class="article-card__link" aria-label="Read Accessibility article">Read Article →</a>
+            </div>
+          </article>
+
+          <article class="article-card" aria-labelledby="art-4-title">
+            <div class="article-card__image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=380&fit=crop&auto=format"
+                alt="MacBook laptop open on a coffee shop table showing a web design project in progress"
+                width="600"
+                height="380"
+                loading="lazy"
+                class="article-card__image"
+              />
+              <span class="article-card__tag article-card__tag--tools">Tools</span>
+            </div>
+            <div class="article-card__body">
+              <p class="article-card__meta"><time datetime="2026-06-14">June 14, 2026</time> · 4 min read</p>
+              <h3 class="article-card__title" id="art-4-title">
+                The W3C Validator: Your First Quality Gate Before Every Submission
+              </h3>
+              <p class="article-card__excerpt">
+                Zero errors, zero warnings. Run your HTML through validator.w3.org
+                before you submit anything — a two-minute habit that separates pros from beginners.
+              </p>
+              <a href="#featured" class="article-card__link" aria-label="Read W3C Validator article">Read Article →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="topics" id="topics" aria-labelledby="topics-heading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__eyebrow">Browse</p>
+          <h2 class="section-header__heading" id="topics-heading">Topics We Cover</h2>
+        </header>
+
+        <ul class="topics__grid" role="list">
+          <li class="topic-card">
+            <span class="topic-card__icon" aria-hidden="true">🏗️</span>
+            <h3 class="topic-card__name">HTML Structure</h3>
+            <p class="topic-card__count">24 articles</p>
+          </li>
+          <li class="topic-card topic-card--accent">
+            <span class="topic-card__icon" aria-hidden="true">🎨</span>
+            <h3 class="topic-card__name">CSS & Styling</h3>
+            <p class="topic-card__count">38 articles</p>
+          </li>
+          <li class="topic-card">
+            <span class="topic-card__icon" aria-hidden="true">⚡</span>
+            <h3 class="topic-card__name">JavaScript</h3>
+            <p class="topic-card__count">51 articles</p>
+          </li>
+          <li class="topic-card">
+            <span class="topic-card__icon" aria-hidden="true">♿</span>
+            <h3 class="topic-card__name">Accessibility</h3>
+            <p class="topic-card__count">17 articles</p>
+          </li>
+          <li class="topic-card">
+            <span class="topic-card__icon" aria-hidden="true">📐</span>
+            <h3 class="topic-card__name">UI/UX Design</h3>
+            <p class="topic-card__count">29 articles</p>
+          </li>
+          <li class="topic-card topic-card--accent">
+            <span class="topic-card__icon" aria-hidden="true">🚀</span>
+            <h3 class="topic-card__name">Performance</h3>
+            <p class="topic-card__count">22 articles</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="principles" id="principles" aria-labelledby="principles-heading">
+      <div class="container principles__inner">
+
+        <article class="principles__content" aria-labelledby="principles-heading">
+          <p class="section-header__eyebrow">Engineering Standards</p>
+          <h2 class="principles__heading" id="principles-heading">The Flight Checklist</h2>
+          <p class="principles__intro">
+            Every article on TechPulse is written against the same engineering standards
+            used at DecodeLabs. Code does not ship until it passes the audit.
+          </p>
+
+          <ol class="checklist" role="list">
+            <li class="checklist__item">
+              <span class="checklist__icon" aria-hidden="true">✓</span>
+              <div class="checklist__text">
+                <strong>IA First</strong> — Define your sitemap before writing a single tag.
+              </div>
+            </li>
+            <li class="checklist__item">
+              <span class="checklist__icon" aria-hidden="true">✓</span>
+              <div class="checklist__text">
+                <strong>Semantic HTML</strong> — Use <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>. One <code>&lt;h1&gt;</code> per page.
+              </div>
+            </li>
+            <li class="checklist__item">
+              <span class="checklist__icon" aria-hidden="true">✓</span>
+              <div class="checklist__text">
+                <strong>External CSS Only</strong> — No inline styles. DRY + BEM methodology.
+              </div>
+            </li>
+            <li class="checklist__item">
+              <span class="checklist__icon" aria-hidden="true">✓</span>
+              <div class="checklist__text">
+                <strong>Grid + Flexbox</strong> — Grid for page structure, Flexbox for component alignment.
+              </div>
+            </li>
+            <li class="checklist__item">
+              <span class="checklist__icon" aria-hidden="true">✓</span>
+              <div class="checklist__text">
+                <strong>Assets with Dimensions</strong> — Every <code>&lt;img&gt;</code> has explicit <code>width</code> and <code>height</code>.
+              </div>
+            </li>
+            <li class="checklist__item">
+              <span class="checklist__icon" aria-hidden="true">✓</span>
+              <div class="checklist__text">
+                <strong>W3C + Lighthouse</strong> — Zero validation errors. Accessibility audit passed.
+              </div>
+            </li>
+          </ol>
+        </article>
+
+        <aside class="principles__aside" aria-label="Quick tip sidebar">
+          <div class="tip-card">
+            <p class="tip-card__label">💡 Pro Tip</p>
+            <blockquote class="tip-card__quote">
+              "The frontend is the only part of the system the world will ever see. Build it well."
+            </blockquote>
+            <p class="tip-card__source">— DecodeLabs Engineering Mandate</p>
+          </div>
+
+          <div class="tip-card tip-card--dark">
+            <p class="tip-card__label">🔍 Debug Model</p>
+            <p class="tip-card__body">When something breaks, isolate the IPO stage:</p>
+            <ul class="tip-card__list">
+              <li>Corrupted <strong>Input</strong>?</li>
+              <li>Logic <strong>Process</strong> error?</li>
+              <li><strong>Rendering</strong> failure?</li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="newsletter" id="newsletter" aria-labelledby="newsletter-heading">
+      <div class="container newsletter__inner">
+        <div class="newsletter__content">
+          <h2 class="newsletter__heading" id="newsletter-heading">Get TechPulse in Your Inbox</h2>
+          <p class="newsletter__sub">
+            Join 12,000+ developers. Three issues a week. Unsubscribe any time.
+          </p>
+          <div class="newsletter__form" role="group" aria-label="Email subscription">
+            <label for="email-input" class="newsletter__label">Your email address</label>
+            <div class="newsletter__row">
+              <input
+                type="email"
+                id="email-input"
+                class="newsletter__input"
+                placeholder="you@example.com"
+                aria-required="true"
+                autocomplete="email"
+              />
+              <button type="button" class="btn btn--primary newsletter__btn">Subscribe Free</button>
+            </div>
+            <p class="newsletter__disclaimer">No spam. Unsubscribe any time.</p>
+          </div>
+        </div>
+        <div class="newsletter__art" aria-hidden="true">
+          <div class="pulse-ring pulse-ring--1"></div>
+          <div class="pulse-ring pulse-ring--2"></div>
+          <div class="pulse-ring pulse-ring--3"></div>
+          <span class="pulse-icon">📡</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container site-footer__inner">
+
+      <div class="site-footer__brand">
+        <a href="#hero" class="site-footer__logo" aria-label="TechPulse Home">
+          <span aria-hidden="true">⬡</span> TechPulse
+        </a>
+        <p class="site-footer__tagline">Built on semantic integrity.<br/>Powered by DecodeLabs · Batch 2026</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h3 class="footer-nav__heading">Explore</h3>
+        <ul class="footer-nav__list">
+          <li><a href="#featured" class="footer-nav__link">Articles</a></li>
+          <li><a href="#topics" class="footer-nav__link">Topics</a></li>
+          <li><a href="#newsletter" class="footer-nav__link">Newsletter</a></li>
+          <li><a href="#principles" class="footer-nav__link">Standards</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav" aria-label="Topics navigation">
+        <h3 class="footer-nav__heading">Topics</h3>
+        <ul class="footer-nav__list">
+          <li><a href="#topics" class="footer-nav__link">HTML Structure</a></li>
+          <li><a href="#topics" class="footer-nav__link">CSS & Styling</a></li>
+          <li><a href="#topics" class="footer-nav__link">JavaScript</a></li>
+          <li><a href="#topics" class="footer-nav__link">Accessibility</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h3 class="footer-nav__heading">Connect</h3>
+        <address class="footer-contact__address">
+          <a href="mailto:decodelabs.tech@gmail.com" class="footer-nav__link">decodelabs.tech@gmail.com</a><br/>
+          <a href="tel:+918933006408" class="footer-nav__link">+91 89330 06408</a><br/>
+          <span>Greater Lucknow, India</span>
+        </address>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="container">
+        <p class="site-footer__copy">
+          &copy; 2026 TechPulse · DecodeLabs. Project 1 — Static Webpage Design.
+          Built with semantic HTML &amp; external CSS only.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
