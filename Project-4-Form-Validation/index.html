@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Sign Up — Form Validation Engine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="page">
+    <div class="card">
+
+      <header class="card-header">
+        <h1>Create Your Account</h1>
+        <p>Project 4 — Form Design &amp; Validation</p>
+      </header>
+
+      <!-- novalidate: we take over validation ourselves via JS -->
+      <form id="signupForm" novalidate>
+
+        <!-- NAME -->
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="e.g. Pari Garg"
+            aria-describedby="name-error"
+            aria-invalid="false"
+            required
+          />
+          <span class="error-message" id="name-error" role="alert"></span>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            aria-describedby="email-error"
+            aria-invalid="false"
+            required
+          />
+          <span class="error-message" id="email-error" role="alert"></span>
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a strong password"
+              aria-describedby="password-error password-hint"
+              aria-invalid="false"
+              required
+            />
+            <button type="button" class="toggle-visibility" id="togglePassword" aria-label="Show password">
+              👁
+            </button>
+          </div>
+
+          <!-- Live strength meter -->
+          <div class="strength-meter" aria-hidden="true">
+            <div class="strength-bar" id="strengthBar"></div>
+          </div>
+          <p class="strength-label" id="strengthLabel">Strength: —</p>
+
+          <ul class="password-hint" id="password-hint">
+            <li id="rule-length">At least 8 characters</li>
+            <li id="rule-upper">One uppercase letter</li>
+            <li id="rule-lower">One lowercase letter</li>
+            <li id="rule-number">One number</li>
+            <li id="rule-special">One special character (#?!@$%^&*-)</li>
+          </ul>
+
+          <span class="error-message" id="password-error" role="alert"></span>
+        </div>
+
+        <!-- CONFIRM PASSWORD -->
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Re-enter your password"
+            aria-describedby="confirm-error"
+            aria-invalid="false"
+            required
+          />
+          <span class="error-message" id="confirm-error" role="alert"></span>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span class="btn-text">Create Account</span>
+          <span class="btn-loader" id="btnLoader"></span>
+        </button>
+
+        <!-- Global success/summary region — announced politely, not on every keystroke -->
+        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
