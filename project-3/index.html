@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signal Lab — Interactive Web Elements | DecodeLabs Project 3</title>
+  <meta name="description" content="Project 3: Interactive Web Elements — a JavaScript DOM manipulation console built for the DecodeLabs Frontend Development internship." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="js-body">
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="header__brand">
+      <span class="eyebrow">DecodeLabs Internship — Project 03</span>
+      <h1 class="header__title">Signal Lab</h1>
+      <p class="header__subtitle">Interactive Web Elements — wiring the client-side nervous system.</p>
+    </div>
+
+    <button class="theme-toggle js-theme-toggle" type="button" aria-pressed="false" aria-label="Toggle dark mode">
+      <span class="theme-toggle__track">
+        <span class="theme-toggle__thumb" aria-hidden="true"></span>
+      </span>
+      <span class="theme-toggle__label js-theme-label">Light</span>
+    </button>
+  </header>
+
+  <main class="layout">
+
+    <!-- ============ SIGNATURE: IPO TRACE CONSOLE ============ -->
+    <section class="trace" aria-label="Live Input Process Output trace">
+      <div class="trace__heading">
+        <h2 class="trace__title">IPO Trace</h2>
+        <p class="trace__hint">Every control below fires a signal through this loop. Try one.</p>
+      </div>
+
+      <div class="trace__nodes">
+        <div class="trace__node js-node-input" data-role="input">
+          <span class="trace__dot"></span>
+          <span class="trace__node-label">Input</span>
+          <span class="trace__node-detail js-node-input-detail">waiting…</span>
+        </div>
+        <span class="trace__arrow" aria-hidden="true">→</span>
+        <div class="trace__node js-node-process" data-role="process">
+          <span class="trace__dot"></span>
+          <span class="trace__node-label">Process</span>
+          <span class="trace__node-detail js-node-process-detail">idle</span>
+        </div>
+        <span class="trace__arrow" aria-hidden="true">→</span>
+        <div class="trace__node js-node-output" data-role="output">
+          <span class="trace__dot"></span>
+          <span class="trace__node-label">Output</span>
+          <span class="trace__node-detail js-node-output-detail">no mutation yet</span>
+        </div>
+      </div>
+
+      <ol class="trace__log js-trace-log" aria-live="polite" aria-label="Signal history"></ol>
+    </section>
+
+    <!-- ============ MODULE GRID ============ -->
+    <section class="grid">
+
+      <!-- MODULE 1: TASK QUEUE -->
+      <article class="module">
+        <header class="module__head">
+          <h3>Task Queue</h3>
+          <span class="module__tag">buttons · createElement · state</span>
+        </header>
+
+        <form class="task-form js-task-form" novalidate>
+          <label class="sr-only" for="task-input">New task</label>
+          <input class="task-form__input js-task-input" id="task-input" type="text" placeholder="Add a task and press Enter…" autocomplete="off" />
+          <button class="btn btn--primary" type="submit">Add</button>
+        </form>
+
+        <ul class="task-list js-task-list"></ul>
+        <p class="task-empty js-task-empty">No tasks yet — the queue is listening.</p>
+      </article>
+
+      <!-- MODULE 2: SIGNAL STRENGTH -->
+      <article class="module">
+        <header class="module__head">
+          <h3>Signal Strength</h3>
+          <span class="module__tag">toggle · classList · dynamic style</span>
+        </header>
+
+        <div class="meter">
+          <div class="meter__track">
+            <div class="meter__fill js-meter-fill"></div>
+          </div>
+          <div class="meter__readout">
+            <span class="meter__value js-meter-value">0</span>
+            <span class="meter__band js-meter-band">idle</span>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn js-meter-minus" type="button" aria-label="Decrease signal">−</button>
+          <button class="btn js-meter-reset" type="button">Reset</button>
+          <button class="btn btn--primary js-meter-plus" type="button" aria-label="Increase signal">+</button>
+        </div>
+      </article>
+
+      <!-- MODULE 3: FIELD NOTES CAROUSEL -->
+      <article class="module">
+        <header class="module__head">
+          <h3>Field Notes</h3>
+          <span class="module__tag">dynamic content · textContent</span>
+        </header>
+
+        <div class="carousel">
+          <p class="carousel__text js-carousel-text">Loading…</p>
+          <div class="carousel__controls">
+            <button class="btn js-carousel-prev" type="button" aria-label="Previous note">←</button>
+            <div class="carousel__dots js-carousel-dots" role="tablist" aria-label="Note selector"></div>
+            <button class="btn js-carousel-next" type="button" aria-label="Next note">→</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- MODULE 4: LIVE FORM VALIDATOR -->
+      <article class="module">
+        <header class="module__head">
+          <h3>Handoff Note</h3>
+          <span class="module__tag">validation · aria-live</span>
+        </header>
+
+        <form class="note-form js-note-form" novalidate>
+          <label class="field-label" for="note-message">Message</label>
+          <textarea class="note-form__textarea js-note-textarea" id="note-message" rows="3" maxlength="140" placeholder="Leave a note for the next dev…"></textarea>
+
+          <div class="note-form__meta">
+            <span class="js-note-count">0</span><span>/140</span>
+            <span class="note-form__status js-note-status" aria-live="polite"></span>
+          </div>
+
+          <button class="btn btn--primary" type="submit">Send note</button>
+        </form>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built for DecodeLabs · Frontend Development Track · Batch 2026</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
